@@ -6,7 +6,7 @@
 .banner{
     background-size:cover;
     background-position:center;
-    background-image: linear-gradient(rgba(0,0,0,0.5),#009688),url(haircut.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),#009688),url(image/haircut.jpg);
     width: 100%;
     height: 100vh;
 }
@@ -44,6 +44,7 @@
    background-image: url(logo.png);
    width: 70px;
    height: 80px;
+   cursor: pointer;
    position: relative;
 }
 
@@ -268,7 +269,9 @@
 
     .logo
     {
-        width: 90px;
+        width: 20%;
+        height: 20%;
+        padding-left: 20px;
     }
 
     .navbar ul li
@@ -363,7 +366,7 @@
     }
 }
 
-@media screen and (max-width: 700px) 
+@media screen and (max-width: 750px) 
 {
     .sidenav
     {
@@ -399,6 +402,7 @@
         z-index: 3;
         right: 20px;
         top: 30px;
+        display: inline;
         cursor: pointer;
         text-align: center;
     }
@@ -491,11 +495,11 @@ hr{
 
 .single-service:hover .service-desc
 {
-    bottom: 40%;
+    bottom: 38%;
     opacity: 1;
 }
 
-@media screen and (max-width: 700px) 
+@media screen and (max-width: 750px) 
 {
     .single-service
     {
@@ -515,7 +519,23 @@ hr{
 
     .single-service:hover .service-desc
     {
-        bottom: 25% !important;
+        bottom:38%;
+    }
+}
+
+@media screen and (max-width: 690px) 
+{
+    .single-service:hover .service-desc
+    {
+        bottom: 100%;
+    }
+}
+
+@media screen and (max-width: 1100px) 
+{
+    .single-service:hover .service-desc
+    {
+        bottom: 25%;
     }
 }
 
@@ -597,5 +617,124 @@ hr{
     .test-column p
     {
         font-size: 13px;
+    }
+}
+
+.footer
+{
+    width:100%;
+    padding: 70px 0px;
+    background: #efefef;
+}
+
+.side
+{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.content-left,.content-right
+{
+    padding: 10px;
+    flex-basis: 45%;
+    margin-bottom: 30px;
+}
+
+.content-right
+{
+    text-align: right;
+}
+
+.side h1{
+    margin: 10px 0;
+}
+.side p{
+    line-height: 35px;
+}
+
+.content-left .fa,.content-right .fa{
+    font-size: 20px;
+    color: #009688;
+    margin: 10px;
+}
+
+.links{
+ text-align: center;
+}
+
+.links .fa
+{
+    font-size: 20px;
+    border: 1px solid #009688;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    color: #009688;
+    cursor: pointer;
+    margin: 40px 5px;
+    transition: 0.5s;
+    border-radius: 3px;
+}
+
+.links .fa:hover
+{
+    transform: translateY(-7px);
+    background: #009688;
+    color: #efefef;
+}
+
+@media screen and (max-width: 700px) 
+{
+    .content-left,.content-right
+    {
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+    .side
+    {
+        width: 80%;
+    }
+
+    .content-left .fa,.content-right .fa{
+        font-size: 15px;
+    }
+
+    .sub-footer h1{
+        font-size: 33px;
+    }
+
+    .footer p{
+        font-size: 14px;
+    }
+    
+    .footer h1{
+        font-size: 27px;
+        padding-top: 3px;
+    }
+    
+    .footer p::after
+    {
+        content:'';
+        width: 38px;
+        height: 24px;
+        top: -13px;
+        transform: rotate(10deg);
+    }
+
+    .links .fa
+    {
+        font-size: 15px;
+        border: 1px solid #009688;
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+        color: #009688;
+        cursor: pointer;
+        margin: 30px 3px;
+        transition: 0.5s;
+        border-radius: 2px;
     }
 }
